@@ -1,0 +1,16 @@
+{
+  "extends": ["plugin:adonis/typescriptApp", "prettier"],
+  "plugins": ["prettier", "svelte3"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  },
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "settings": {
+    "svelte3/typescript": true
+  }
+}

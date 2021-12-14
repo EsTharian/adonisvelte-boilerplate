@@ -1,0 +1,5 @@
+alias node='docker-compose exec -u $(id -u):$(id -g) node node'
+alias yarn='docker-compose exec -u $(id -u):$(id -g) node yarn'
+alias redis-server='docker-compose exec redis redis-server'
+alias psql='docker-compose exec db psql'
+export PS1=" (dockerized)${PS1}"

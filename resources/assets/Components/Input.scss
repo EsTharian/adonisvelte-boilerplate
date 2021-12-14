@@ -1,0 +1,12 @@
+div {
+  @apply flex flex-col gap-2 justify-center w-full;
+}
+
+label {
+  @apply mt-4;
+}
+
+input,
+textarea {
+  @apply py-2 px-3 border border-gray-700 w-full;
+}

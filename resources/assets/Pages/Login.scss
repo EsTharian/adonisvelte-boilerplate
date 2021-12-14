@@ -1,0 +1,11 @@
+.login {
+  @apply flex items-center justify-center h-screen;
+
+  &__wrapper {
+    @apply flex flex-col gap-8;
+
+    form {
+      @apply flex flex-col;
+    }
+  }
+}
