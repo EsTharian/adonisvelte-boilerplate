@@ -1,8 +1,6 @@
 import { DateTime } from 'luxon'
 import Hash from '@ioc:Adonis/Core/Hash'
-import Question from 'App/Models/Question'
-import Answer from 'App/Models/Answer'
-import { column, beforeSave, BaseModel, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
+import { column, beforeSave, BaseModel } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Auth extends BaseModel {
   @column({ isPrimary: true })
@@ -25,12 +23,6 @@ export default class Auth extends BaseModel {
 
   @column({ serializeAs: null })
   public password: string
-
-  @hasMany(() => Question)
-  public questions: HasMany<typeof Question>
-
-  @hasMany(() => Answer)
-  public answers: HasMany<typeof Answer>
 
   @column({ serializeAs: null })
   public rememberMeToken?: string

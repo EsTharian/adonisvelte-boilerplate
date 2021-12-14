@@ -28,6 +28,6 @@ Route.get('google/redirect', 'AuthController.googleRedirect').as('google-redirec
 
 Route.group(() => {
   Route.get('/', async ({ response }) => {
-    return response.redirect().toRoute('questions.index')
+    return response.send('Hello world')
   }).as('index')
 }).middleware(['auth'])
