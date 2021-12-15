@@ -37,11 +37,9 @@
   window.init = init
 
   function init() {
-    window.gapi.load('auth2', function() {
-      window.gapi.auth2.init({
-        client_id: document.querySelector('[name="google-signin-client_id"]')
-          .getAttribute('content'),
-      });
+    window.gapi.auth2.init({
+      client_id: document.querySelector('[name="google-signin-client_id"]')
+        .getAttribute('content'),
     });
   }
 
